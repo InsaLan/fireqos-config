@@ -7,4 +7,5 @@
 [ "$1" = "" ] && CFG="fireqos_head.conf" || CFG="fireqos.conf"
 
 $CP `sed 's#/[^/]*$#/#' <<< $0`$CFG $DEST/etc/firehol/fireqos.conf
+$CP `sed 's#/[^/]*$#/#' <<< $0`vpn_list $DEST/etc/firehol/vpn_list
 $PREFIX fireqos start
